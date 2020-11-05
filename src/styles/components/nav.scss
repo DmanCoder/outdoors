@@ -1,0 +1,138 @@
+.nav {
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+
+  ul {
+    height: 6.5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    @include immaFlex($align: center);
+    @include mediaQ('>=desktop') {
+      height: 12rem;
+      padding-left: 12rem;
+      padding-right: 12rem;
+    }
+
+    li {
+      font-size: 1.45rem;
+      // color: white;
+      font-weight: 500;
+      color: #fff;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    li:nth-child(1) // LOGO
+    {
+      @include mediaQ('>=desktop') {
+        margin-right: auto;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    li:nth-child(2) // HAMBURGER
+    {
+      padding-right: 1.3rem;
+      margin-left: auto;
+      @include mediaQ('>=desktop') {
+        display: none;
+      }
+    }
+    li:nth-child(10), // IG
+    li:nth-child(12) // SEARCH ICON
+    {
+      // stroke: #fff;
+      stroke: #fff;
+    }
+
+    li:nth-child(1), // LOGO
+    li:nth-child(9), // FACEBOOK
+    li:nth-child(11) // TWITTER
+    {
+      // fill: #fff;
+      fill: #fff;
+    }
+
+    li:nth-child(12), // SEARCH ICON
+    li:nth-child(11), // TWITTER
+    li:nth-child(10), // IG
+    li:nth-child(9), //  FACEBOOK
+    li:nth-child(8), //  ABOUT
+    li:nth-child(7), //  BOOK NOW
+    li:nth-child(6), //  SIGNATURE TRIPS
+    li:nth-child(5), //  SPECIALS
+    li:nth-child(4), //  DESTINATIONS
+    li:nth-child(3) //  LANGUAGE SELECTION
+    {
+      display: none;
+      cursor: not-allowed;
+
+      @include mediaQ('>=desktop') {
+        display: block;
+        padding: 1rem;
+        // color: white;
+        color: #fff;
+        fill: white;
+        fill: #fff;
+
+        margin-left: 5rem;
+        &:not(:last-child) {
+        }
+      }
+    }
+
+    li:nth-child(3) //  LANGUAGE SELECTION
+    {
+      display: none;
+      @include mediaQ('>=desktop') {
+        @include immaFlex($align: center);
+      }
+    }
+
+    li:nth-child(3), // LANGUAGE SELECTION
+    li:nth-child(8) //  ABOUT
+    {
+      @include mediaQ('>=desktop') {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.nav-side {
+  display: none;
+  @include mediaQ('>=desktop') {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to top, $color__primary 5%, $color__secondary);
+    width: 25%;
+    z-index: 2;
+    overflow: none;
+  }
+
+  &__title {
+    opacity: 0;
+    color: #fff;
+    font-size: 5rem;
+    margin: 0;
+    font-size: 11rem;
+    align-items: flex-start;
+    top: -30rem;
+    left: -28rem;
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    @include centerElement($lt: 80%, $tp: 48%);
+    transform: rotate(-90deg);
+  }
+}

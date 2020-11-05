@@ -1,0 +1,13 @@
+.twins {
+  @include mediaQ('>=desktop') {
+    @include immaFlex($align: center, $just: space-between);
+
+    &__one:first-child {
+      width: 50%;
+      // padding-right: 10rem;
+    }
+    &__two:last-child {
+      width: 50%;
+    }
+  }
+}

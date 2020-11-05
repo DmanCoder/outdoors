@@ -1,0 +1,511 @@
+/* ============================================
+                SLIDES
+   ============================================ */
+
+.slide-container {
+  @include mediaQ('>=desktop') {
+    padding-left: 15rem;
+    padding-right: 8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 10;
+    overflow: auto;
+  }
+}
+
+/* ============================================
+                  BANNER
+   ============================================ */
+.banner-layer-one,
+.banner-layer-two {
+  width: 0;
+  height: 190%;
+  position: absolute;
+}
+.banner-layer-one {
+  background-color: rgba(#fff, 0.5);
+}
+.banner-layer-two {
+  background-color: #fff;
+}
+
+.banner-text {
+  display: none;
+  @include mediaQ('>=desktop') {
+    display: block;
+    position: absolute;
+    top: 69.5vh;
+    left: 38rem;
+    z-index: 100;
+    height: 0;
+  }
+
+  &__msg,
+  &__title,
+  &__btn {
+    @include mediaQ('>=desktop') {
+      position: relative;
+      z-index: 20;
+      top: -15rem;
+      left: -20rem;
+    }
+  }
+
+  &__msg {
+    display: none;
+    @include mediaQ('>=desktop') {
+      display: block;
+      color: #fff;
+      opacity: 0.5;
+      font-size: 2.2rem;
+      margin-bottom: -1.5rem;
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 5rem;
+    margin: 0;
+    @include mediaQ('>=desktop') {
+      font-size: 15.5rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__title2 {
+  }
+
+  &__btn {
+    display: none;
+    background: none;
+    word-wrap: break-word;
+
+    &:focus {
+      outline: none;
+    }
+    @include mediaQ('>=desktop') {
+      border: none;
+      display: block;
+      cursor: pointer;
+      color: #fff;
+      opacity: 0.85;
+      // margin-top: 0.5rem;
+      // margin-left: 0.5rem;
+    }
+  }
+
+  &__btn-back,
+  &__btn-start {
+    position: absolute;
+    white-space: nowrap;
+    @include immaFlex($align: center);
+
+    &:hover span:first-child {
+      font-size: 5.5rem;
+      transform: rotate(90deg);
+    }
+
+    span:first-child {
+      font-size: 4rem;
+      transition: all 0.365s;
+    }
+    span:last-child {
+      font-size: 2rem;
+      margin-left: 1rem;
+      text-decoration: underline;
+    }
+  }
+
+  &__btn-back {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.banner {
+  text-align: center;
+  height: 100vh;
+  line-height: 8rem;
+  @include immaFlex($align: center, $just: center, $dir: column);
+  @include mediaQ('>=desktop') {
+    margin-right: -15rem;
+    margin-left: -15rem;
+    align-items: flex-start;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image-holder {
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        rgba($color__primary, 0.3),
+        rgba($color__secondary, 0.2)
+      ),
+      url('../../assets/imgs/john-o-nolan-rqrv0bbzMLg-unsplash.jpg');
+
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    background-size: cover;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 5rem;
+    @include mediaQ('>=desktop') {
+      font-size: 13rem;
+      align-items: flex-start;
+      display: none;
+    }
+  }
+}
+
+/* ============================================
+                  INFO
+   ============================================ */
+.info {
+  text-align: center;
+  margin-top: 8rem;
+  @include mediaQ('>=desktop') {
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+
+    @include mediaQ('>=desktop') {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    @include mediaQ('>=desktop') {
+      font-size: 2.45rem;
+      max-width: 60rem;
+    }
+  }
+
+  &__sub-title::after {
+    content: '';
+    background-color: $color__primary;
+    display: block;
+    height: 0.13rem;
+    width: 5rem;
+    margin: 3rem auto 0;
+
+    @include mediaQ('>=desktop') {
+      text-align: left;
+      width: 10rem;
+      margin: 3rem 0.3rem 0;
+      height: 0.2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.45rem;
+    margin-bottom: 4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    @include mediaQ('>=desktop') {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  &__text:last-child {
+    margin-bottom: 8rem;
+  }
+
+  &__quick-facts {
+    margin-top: -15rem;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+    @include mediaQ('>=desktop') {
+      font-size: 2.85rem;
+    }
+  }
+
+  &__quick-facts::after {
+    content: '';
+    background-color: $color__primary;
+    display: block;
+    height: 0.05rem;
+    width: 5rem;
+    margin: 3rem auto 0;
+
+    @include mediaQ('>=desktop') {
+      text-align: left;
+      width: 10rem;
+      margin: 3rem 1rem 0;
+      height: 0.2rem;
+    }
+  }
+
+  &__facts {
+    font-size: 1.45rem;
+    margin-bottom: 2.5rem;
+    color: $color__primary;
+
+    @include mediaQ('>=desktop') {
+      font-size: 1.45rem;
+    }
+
+    span:first-child {
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      color: $color__primary;
+    }
+    span:last-child {
+      font-weight: normal;
+      display: block;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $color__primary;
+    color: rgba(#fff, 0.85);
+    padding: 1.4rem 3rem;
+    font-size: 1.45rem;
+    opacity: 0.9;
+    cursor: not-allowed;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include mediaQ('>=desktop') {
+      font-size: 1.3rem;
+      padding: 2rem 2rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  svg {
+    fill: #e0e0e0;
+    stroke: #fff;
+    transform: scale(0.8);
+    z-index: -1;
+    @include mediaQ('>=desktop') {
+      margin-right: -6rem;
+      position: relative;
+      z-index: -1;
+      margin-top: -6rem;
+      position: relative;
+      right: 7rem;
+      margin-top: -20rem;
+      top: 2rem;
+      transform: scale(0.7);
+    }
+  }
+
+  div div:last-child {
+    @include mediaQ('>=desktop') {
+      padding-left: 15rem;
+    }
+  }
+}
+
+/* ============================================
+                REC / RECOMMENDATION
+   ============================================ */
+.rec2,
+.rec {
+  text-align: center;
+  margin-top: 8rem;
+
+  @include mediaQ('>=desktop') {
+    text-align: left;
+    margin-top: 20rem;
+  }
+
+  &__img-container {
+    position: relative;
+  }
+
+  &__image-holder {
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/imgs/kyle-cut-media-UrhglJ-2Q8M-unsplash.jpg')
+      no-repeat 95% 10% / cover;
+  }
+  &__image-holder2 {
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/imgs/lion-king.jpg') no-repeat 95% 10% / cover;
+  }
+
+  &__img-reveal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background-color: #e0e0e0;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    @include mediaQ('>=desktop') {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__title::after {
+    content: '';
+    background-color: $color__primary;
+    display: block;
+    height: 0.13rem;
+    width: 5rem;
+    margin: 3rem auto 0;
+
+    @include mediaQ('>=desktop') {
+      text-align: left;
+      width: 10rem;
+      margin: 3rem 1rem 0;
+      height: 0.2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.45rem;
+    margin-bottom: 4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+
+    @include mediaQ('>=desktop') {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  .twins__one:first-child {
+    @include mediaQ('>=desktop') {
+      height: 75vh;
+    }
+  }
+  .twins__two:last-child {
+    @include mediaQ('>=desktop') {
+      margin-left: 10rem;
+      height: 75vh;
+    }
+  }
+}
+
+/* ============================================
+                WELCOME
+   ============================================ */
+
+.welcome {
+  margin-bottom: 8rem;
+  text-align: center;
+  @include mediaQ('>=desktop') {
+    margin-bottom: 20rem;
+    height: 100vh;
+    @include immaFlex($align: center, $just: center, $dir: column);
+  }
+
+  &__title {
+    max-width: 34rem;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 2.6rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    @include mediaQ('>=desktop') {
+      max-width: 98rem;
+      font-size: 6.5rem;
+    }
+  }
+
+  &__title::before {
+    content: ' ';
+    background-image: url('../../assets/icons/quote.svg');
+    background-size: cover;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    transform: rotate(180deg);
+    width: 1.5rem;
+    height: 1.5rem;
+    @include mediaQ('>=desktop') {
+      left: 3.5rem;
+      top: -3rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__title::after {
+    content: ' ';
+    background-image: url('../../assets/icons/quote.svg');
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    @include mediaQ('>=desktop') {
+      right: 8rem;
+      bottom: -3rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__text {
+    margin-top: 3rem;
+    font-size: 1.45rem;
+    // margin-bottom: 4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+
+    @include mediaQ('>=desktop') {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+      max-width: 98rem;
+      line-height: 3.5rem;
+    }
+  }
+}
+
+.margin-b {
+  margin-bottom: 20rem;
+}
