@@ -1,0 +1,43 @@
+.top-nav {
+  background-color: #fff;
+  height: 5rem;
+  padding: 1.3rem;
+  @include immaFlex($align: center);
+
+  ul {
+    width: 100%;
+    @include immaFlex($align: center, $just: space-between);
+
+    li {
+      @include immaFlex($align: center);
+    }
+
+    li:nth-child(1) {
+      span {
+        font-size: 2.25rem;
+      }
+    }
+
+    li:nth-child(2) {
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    li:nth-child(3) {
+      span {
+        display: none;
+      }
+    }
+
+    svg {
+      color: $color__primary;
+      fill: $color__primary;
+      stroke: $color__primary;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.side-nav {
+}
