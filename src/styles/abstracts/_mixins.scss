@@ -4,7 +4,7 @@
 @mixin mediaQ($breakpoint) {
   /* 
    * TABLET: 726px
-   * LAPTOP / DESKTOP: 1024px || 2093px
+   * LAPTOP / DESKTOP: 1024px 
    * LAPTOP / DESKTOP LARGE: 1440px
    */
   @if $breakpoint == '>=tablet' {

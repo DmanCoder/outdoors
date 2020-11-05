@@ -1,0 +1,20 @@
+.banner {
+  height: calc(100vh - 6rem);
+  width: 100%;
+  background: url('../../assets/imgs/thumbnail.JPG') no-repeat 80% 10% / cover;
+}
+
+// VIDEO
+.video-size {
+  display: none;
+  @include mediaQ('>=desktop') {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.video-size > video {
+  min-width: 100%;
+  min-height: 100%;
+}

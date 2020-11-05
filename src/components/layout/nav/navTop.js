@@ -1,8 +1,7 @@
 import React from 'react';
 
-// Svg
-// import Search from '../../assets/icons/ig.svg';
-import { ReactComponent as Search } from '../../assets/icons/search.svg';
+// SVS
+import { ReactComponent as Search } from '../../../assets/icons/search.svg';
 
 const NavTop = () => {
   return (
@@ -11,7 +10,10 @@ const NavTop = () => {
         <li>
           <span class="material-icons">menu</span>
         </li>
-        <li>OUTDOORS</li>
+        <li>
+          <span>Great</span>
+          <span>Outdoors</span>
+        </li>
         <li>
           <span>Search</span>
           <Search />
