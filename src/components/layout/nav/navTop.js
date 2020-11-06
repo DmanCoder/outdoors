@@ -8,7 +8,7 @@ const NavTop = () => {
     <div className="top-nav">
       <ul>
         <li>
-          <span class="material-icons">menu</span>
+          <span className="material-icons">menu</span>
         </li>
         <li>
           <span>Great</span>
