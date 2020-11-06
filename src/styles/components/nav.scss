@@ -1,42 +1,79 @@
 .top-nav {
   background-color: #fff;
   height: 6rem;
-  padding: 1.3rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
 
   @include immaFlex($align: center);
+  @include mediaQ('>=desktop') {
+    height: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 
   ul {
     width: 100%;
     @include immaFlex($align: center, $just: space-between);
 
     li {
+      text-transform: uppercase;
       @include immaFlex($align: center);
     }
 
     li:nth-child(1) {
       span {
         font-size: 2.25rem;
+
+        @include mediaQ('>=desktop') {
+          font-size: 2.8rem;
+        }
       }
     }
 
     li:nth-child(2) {
       font-weight: 700;
       font-size: 1.3rem;
-      text-transform: uppercase;
       flex-direction: column;
 
       span:first-child {
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
 
       span:last-child {
         margin-top: -0.2rem;
+        @include mediaQ('>=desktop') {
+          font-size: 2rem;
+        }
+      }
+
+      svg {
+        margin-bottom: -0.5rem;
+        margin-top: -0.5rem;
+        @include mediaQ('>=desktop') {
+          width: 2.4rem;
+          height: 2.4rem;
+          margin-bottom: -0.8rem;
+          margin-top: -0.8rem;
+        }
       }
     }
 
     li:nth-child(3) {
       span {
         display: none;
+        @include mediaQ('>=desktop') {
+          display: block;
+          margin-right: 1rem;
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+
+      svg {
+        @include mediaQ('>=desktop') {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
       }
     }
 

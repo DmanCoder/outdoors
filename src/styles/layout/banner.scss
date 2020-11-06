@@ -4,6 +4,10 @@
   overflow: hidden;
   background: url('../../assets/imgs/thumbnail.JPG') no-repeat 70% 50% / cover;
 
+  @include mediaQ('>=desktop') {
+    height: calc(100vh - 8rem);
+  }
+
   video {
     object-fit: fill;
     display: none;
