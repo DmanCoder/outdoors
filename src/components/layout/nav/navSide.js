@@ -1,7 +1,6 @@
 import React from 'react';
 
 // SVS
-import { ReactComponent as Facebook } from '../../../assets/icons/facebook.svg';
 import { ReactComponent as Ig } from '../../../assets/icons/ig.svg';
 import { ReactComponent as Twitter } from '../../../assets/icons/twitter.svg';
 
@@ -10,7 +9,7 @@ const NavSide = () => {
     <div className="side-nav">
       <ul className="side-nav__icons">
         <li>
-          <Facebook />
+          <span className="material-icons">facebook</span>
         </li>
         <li>
           <Twitter />

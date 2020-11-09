@@ -13,6 +13,14 @@ const Banner = () => {
           />
         </video>
       </div>
+
+      <div className="banner__text">
+        <h1>
+          <span>Stunning</span> <span>Dolomites</span>
+        </h1>
+        <p>The "Pale Mountains" Italy</p>
+        <button>Discover The Beauty</button>
+      </div>
     </div>
   );
 };

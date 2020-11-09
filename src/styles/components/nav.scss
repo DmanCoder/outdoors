@@ -101,7 +101,6 @@
 
   @include mediaQ('>=desktop') {
     position: fixed;
-    display: block;
     width: 30vw;
     background: #fff;
     z-index: 10;
